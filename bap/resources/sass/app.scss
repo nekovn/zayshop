@@ -1,0 +1,43 @@
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    background-color: rgba(251, 253, 253, 0.253);
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 1s ease-in-out infinite reverse;
+}
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.show-btn {
+    position: absolute;
+    inset: 0px 0px auto auto;
+    margin: 0px;
+    transform: translate(93px, 38px);
+}
+
+
+
