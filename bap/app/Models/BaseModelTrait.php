@@ -16,16 +16,17 @@ trait BaseModelTrait
 
         static::creating(function ($model) {
             if (Auth::check() && isset($model->created_by)) {
-                $model->created_by = Auth::user()->id;
+                $model->created_by = Auth::user()->name;
             }
             if (isset($model->tell)) {
                 $model->tell = Helper::convertFormatPhone($model->tell);
             }
+
         });
 
         static::updating(function ($model) {
             if (Auth::check() && isset($model->updated_by)) {
-                $model->updated_by = Auth::user()->id;
+                $model->updated_by = Auth::user()->name;
             }
             if (isset($model->tell)) {
                 $model->tell = Helper::convertFormatPhone($model->tell);

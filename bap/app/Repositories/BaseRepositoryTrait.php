@@ -32,9 +32,10 @@ trait BaseRepositoryTrait
      *               'limit' => 25,                       取得件数の制限を指定する。未指定の場合、指定なし
      *               'select' => ['id as id', ...]        取得項目を指定する。未指定の場合、全項目を取得する。
      *              ]
+     * @param boolean $first
      * @return array 取得結果
      */
-    public function find(array $conditions, $first = false)
+    public function find(array $conditions, bool $first = false)
     {
         $model = $this->getModel();
         if ($conditions) {

@@ -90,8 +90,7 @@ class Helper
      * @param $thead
      * @return string
      */
-    public
-    static function showTbody($items, $thead): string
+    public static function showTbody($items, $thead): string
     {
         $xhtml = "";
         if ($items && $thead) {

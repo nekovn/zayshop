@@ -29,10 +29,10 @@ trait BaseControllerTrait
 
     /**
      * @param array $conditions
-     * @param boolean $first
+     * @param bool $first
      * @return array
      */
-    public function findItemWithCondition(array $conditions, $first = false): array
+    public function findItemWithCondition(array $conditions, bool $first = false): array
     {
         return [
             'items' => $this->service->find($conditions, $first)
